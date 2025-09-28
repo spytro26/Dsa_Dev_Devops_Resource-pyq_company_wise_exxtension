@@ -54,7 +54,7 @@ The server provides the following endpoints:
 ## File Structure
 
 ```
-/home/ankush/temp/ex/
+/home/rahul/temp/ex/
 ├── background.js          # Extension background script
 ├── popup.js              # Extension popup interface
 ├── popup.html            # Extension popup HTML
