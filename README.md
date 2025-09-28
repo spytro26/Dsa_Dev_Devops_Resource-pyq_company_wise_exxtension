@@ -5,7 +5,9 @@
 ## Setup Instructions
 
 
-clone the repo with  https://github.com/spytro26/Dsa_Dev_Devops_Resource-pyq_company_wise_exxtension
+clone the repo with 
+```bash
+git clone https://github.com/spytro26/Dsa_Dev_Devops_Resource-pyq_company_wise_exxtension
 
 
 ### 3. Load the Chrome Extension
