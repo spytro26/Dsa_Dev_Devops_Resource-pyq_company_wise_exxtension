@@ -10,7 +10,7 @@ clone the repo with  https://github.com/spytro26/Dsa_Dev_Devops_Resource-pyq_com
 
 ### 3. Load the Chrome Extension
 
-1. Open Chrome and go to `chrome://extensions/`
+1. Open Chrome and go to `chrome://extensions/` if brave got to brave://extensions/ same for other browsers
 2. Enable "Developer mode" in the top right
 3. Click "Load unpacked" and select the extension directory
 4. The extension icon should appear in the toolbar
