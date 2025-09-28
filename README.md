@@ -2,22 +2,22 @@
 
 
 
-## Setup Instructions
+## 1. Setup Instructions
 
 
 clone the repo with 
-```bash
+
 git clone https://github.com/spytro26/Dsa_Dev_Devops_Resource-pyq_company_wise_exxtension
 
 
-### 3. Load the Chrome Extension
+### 2. Load as browser  Extension
 
-1. Open Chrome and go to `chrome://extensions/` if brave got to brave://extensions/ same for other browsers
+1. Open Chrome and go to `chrome://extensions/` if brave got to `brave://extensions/` same for other browsers
 2. Enable "Developer mode" in the top right
-3. Click "Load unpacked" and select the extension directory
+3. Click "Load unpacked" and select the extension directory (select the folder name Dsa_Dev_Devops_Resource-pyq_company_wise_exxtension . it wil be present in where you ran  the command git clone   )
 4. The extension icon should appear in the toolbar
 
-### 4. Use the Extension
+### 3. Use the Extension
 
 
 2. Click the extension icon in Chrome
