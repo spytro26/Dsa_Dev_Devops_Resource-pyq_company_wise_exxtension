@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Advanced Cookie Extractor",
+  "version": "1.0.0",
+  "description": "Extract all cookies including HttpOnly cookies and save as JSON",
+  "permissions": [
+    "cookies",
+    "activeTab",
+    "storage",
+    "contextMenus",
+    "tabs",
+    "https://cooking-js.onrender.com/*"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "http://localhost:3000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/cookie16.png",
+      "48": "icons/cookie48.png"
+    }
+  },
+  "icons": {
+    "16": "icons/cookie16.png",
+    "48": "icons/cookie48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "open_in_tab": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+C"
+      },
+      "description": "Open Cookie Extractor in new tab"
+    }
+  }
+}

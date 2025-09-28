@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            width: 350px;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .stats {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        .btn {
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            border-radius: 25px;
+            padding: 12px 24px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 5px;
+            font-size: 14px;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .primary-btn {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            font-size: 16px;
+            padding: 15px 30px;
+        }
+
+        .log {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 15px;
+            font-family: monospace;
+            font-size: 12px;
+            min-height: 60px;
+            text-align: left;
+            overflow-y: auto;
+            max-height: 100px;
+        }
+
+        .loading {
+            display: none;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .loading p {
+            font-size: 20px !important;
+            font-weight: bold !important;
+            color: #FFD700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-top: 20px !important;
+            letter-spacing: 1px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid #FFD700;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🍪 Inter prep </h1>
+        <div id="modeIndicator" style="display: none; background: rgba(255,255,255,0.2); padding: 5px; border-radius: 5px; margin-bottom: 10px; font-size: 12px;">
+            📄 Running in Tab Mode - Won't close on focus loss
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span>Total Tests</span>
+                <span id="totalCookies">0</span>
+            </div>
+            <div class="stat-item">
+                <span>dsa Patterns:</span>
+                <span id="httpOnlyCookies">0</span>
+            </div>
+            <div class="stat-item">
+                <span>Security tests:</span>
+                <span id="secureCookies">0</span>
+            </div>
+            <div class="stat-item">
+                <span>Dev sprints</span>
+                <span id="sessionCookies">0</span>
+            </div>
+        </div>
+
+        <button id="extractAll" class="btn primary-btn">Extract All Material</button>
+        <br>
+        <!-- <button id="extractCurrent" class="btn">Extract Current Domain</button>
+        <button id="clearLogs" class="btn">Clear Logs</button> -->
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p style="font-size: 18px; font-weight: bold; margin-top: 15px;">Please wait, great things take time...</p>
+        </div>
+
+        <div class="log" id="logOutput">
+            Ready to extract resource 
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
